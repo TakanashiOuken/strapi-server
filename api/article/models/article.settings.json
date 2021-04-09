@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "brief": {
+      "type": "richtext"
+    },
+    "articleEntryId": {
+      "type": "biginteger"
+    },
+    "publishedDate": {
+      "type": "date"
+    },
+    "raw": {
+      "type": "json"
+    },
+    "reportName": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "audio",
+        "report",
+        "video"
+      ]
+    },
+    "src": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "authors": {
+      "collection": "author",
+      "via": "articles",
+      "dominant": true
+    }
+  }
+}

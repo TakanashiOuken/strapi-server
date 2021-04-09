@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "author"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "image": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "login": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "articles": {
+      "via": "authors",
+      "collection": "article"
+    }
+  }
+}
